@@ -1,0 +1,44 @@
+{
+  "name": "tdd-boilerplate",
+  "version": "1.0.0",
+  "description": "Javascript TDD projects boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "lint" : "./node_modules/.bin/eslint src/*.js",
+    "prepush" : "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-polyfill --compilers js:babel-register",
+    "test:tdd" : "npm run test -- --watch",
+    "test:coverage" : "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinialbano/tdd-boilerplate.git"
+  },
+  "keywords": [
+    "Javascript",
+    "TDD",
+    "boilerplate"
+  ],
+  "author": "Vinicius Albano <vinialbano@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vinialbano/tdd-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vinialbano/tdd-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1"
+  }
+}
